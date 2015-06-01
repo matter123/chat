@@ -1,0 +1,129 @@
+#loginbox form *{
+  width: 90%;
+  margin: 10px 0;
+  font-family: "DejaVu Sans", sans;
+}
+#loginbox form input {
+  font-size: 18px;
+  min-height: 26px;
+}
+
+#loginbox form input[type=submit] {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid rgb(86, 86, 86);
+    border-radius: 3px;
+    background-color: white;
+}
+
+#loginbox form {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 90%;
+}
+#loginbox form h2 {
+    text-align: center;
+    padding: 0px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 4px;
+    color: white;
+}
+#loginbox {
+  width: 400px;
+  border: #9F9F9F 5px solid;
+  background: dodgerblue;
+  text-align: center;
+  border-radius: 20px;
+  padding: 15px 0;
+  margin-top: 11%;
+  margin-right: auto;
+  margin-left: auto;
+}
+#loginbox:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+#statusbox {
+  font-family: "DejaVu Sans", sans;
+  border: #9F9F9F 4px solid;
+  border-radius: 0 0 10px 10px;
+  border-top: 0px;
+  background: dodgerblue;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  padding: 10px;
+  transform: translate(-50%, 0);
+  color: white;
+}
+html{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(#EBEDEF,#D0DBDD) fixed;
+    /*background-image: url('bg.png'), linear-gradient(#EBEDEF,#D0DBDD, #EBEDEF);*/
+
+}
+#bg {
+    background-image: url('bg.png')
+}
+#signup {
+    font-family: "DejaVu Sans", sans;
+    border: #9F9F9F 4px solid;
+    border-radius: 0 0 10px 0;
+    border-top: 0;
+    border-left: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+}
+#signup a {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+@media (max-width: 1100px) {
+    body::after {
+        content: 'under 1100px'
+    }
+}
+@media (max-width: 750px) {
+    #signup {
+        font-family: "DejaVu Sans", sans;
+        border: #9F9F9F 4px solid;
+        border-radius: 0 0 0 0;
+        width: 100%;
+        margin-bottom: 50px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        background: dodgerblue;
+        color: white;
+        text-align: center;
+    }
+    #loginbox {
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        transform: translate(-50%, 0);
+    }
+}

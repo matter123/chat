@@ -1,0 +1,17 @@
+{
+	"port": "443",
+	"https": {
+		"cert": "/etc/openssl/server.cert",
+		"key": "/etc/openssl/server.key",
+	},
+	"token": {
+		"size": 128,
+		"expire": 3600,
+	},
+	"mysql": {
+		"user": "mysql_user",
+		"host": "localhost",
+		"pass": "password",
+		"database": "chat",
+	},
+}

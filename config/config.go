@@ -42,11 +42,10 @@ func Settings() *Configuration {
 
 func readConfig() *Configuration {
 	file, _ := os.Open("conf.json")
-	decoder := json.NewDecoder(file)
 	config := Configuration{}
-	err := decoder.Decode(&config)
+	err := json.NewDecoder(file).Decode(&config)
 	if err != nil {
-		log.Fatalf("Could not read configuration file: ", err)
+		log.Fatalf("Could not read configuration file: %s", err.Error())
 	}
 	return &config
 }

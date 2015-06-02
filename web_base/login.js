@@ -4,7 +4,6 @@ $(document).ready(function() {
     $("#statusbox").hide();
   } else {
     $("#statusbox h2").text(decodeURIComponent(Cookies.get("status").replace(/\+/g,  " ")));
-    Cookies.remove("status",  { path: '' });
   }
 });
 

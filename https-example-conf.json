@@ -8,6 +8,9 @@
 		"size": 128,
 		"expire": 3600,
 	},
+	"password": {
+			"cost": 9,
+	},
 	"mysql": {
 		"user": "mysql_user",
 		"host": "localhost",

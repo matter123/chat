@@ -4,6 +4,10 @@
 		"size": 128,
 		"expire": 3600,
 	},
+	"password": {
+			"saltsize": 128,
+			"cost": 9,
+	},
 	"mysql": {
 		"user": "mysql_user",
 		"host": "localhost",

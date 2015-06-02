@@ -13,7 +13,7 @@ func main() {
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
-	http.Handle("/", http.FileServer(http.Dir("static")))
+	http.Handle("/", http.FileServer(http.Dir("web_base")))
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/signup", signup)
 	log.Fatal(server.ListenAndServe())

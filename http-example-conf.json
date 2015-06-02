@@ -5,7 +5,6 @@
 		"expire": 3600,
 	},
 	"password": {
-			"saltsize": 128,
 			"cost": 9,
 	},
 	"mysql": {

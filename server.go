@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/matter123/chat/chat"
+	"github.com/matter123/chat/chatserver"
 	"github.com/matter123/chat/config"
 	"log"
 	"net/http"
@@ -16,8 +16,8 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 	http.Handle("/", http.FileServer(http.Dir("web_base")))
-	http.HandleFunc("/login", chat.LoginHandle)
-	http.HandleFunc("/signup", chat.SignupHandle)
+	http.HandleFunc("/login", chatserver.LoginHandle)
+	http.HandleFunc("/signup", chatserver.SignupHandle)
 	if config.Settings().SSLSettings == nil {
 		log.Fatal(server.ListenAndServe())
 	} else {

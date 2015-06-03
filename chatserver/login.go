@@ -34,7 +34,8 @@ var db = setupDB()
 
 func setupDB() *sql.DB {
 	dsn := config.Settings().MYSQLSettings.User + ":" + config.Settings().MYSQLSettings.Pass + "@tcp(" +
-		config.Settings().MYSQLSettings.Host + ")/" + config.Settings().MYSQLSettings.DB
+		config.Settings().MYSQLSettings.Host + ")/" + config.Settings().MYSQLSettings.Database
+	log.Print(dsn)
 	db, err := sql.Open("mysql", dsn)
 	if err != nil {
 		log.Fatal(err)

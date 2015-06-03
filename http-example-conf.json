@@ -1,16 +1,16 @@
 {
 	"port": "80",
-	"token": {
+	"TokenSettings": {
 		"size": 128,
-		"expire": 3600,
+		"expire": 3600
 	},
-	"password": {
-			"cost": 9,
+	"PasswordSettings": {
+			"cost": 9
 	},
-	"mysql": {
+	"MYSQLSettings": {
 		"user": "mysql_user",
-		"host": "localhost",
+		"host": "localhost:3306",
 		"pass": "password",
-		"database": "chat",
-	},
+		"database": "chat"
+	}
 }

@@ -15,10 +15,10 @@ type tokenConfig struct {
 	Expire int
 }
 type mysqlConfig struct {
-	User string
-	Host string
-	Pass string
-	DB   string
+	User     string
+	Host     string
+	Pass     string
+	Database string
 }
 type passwordConfig struct {
 	Cost int

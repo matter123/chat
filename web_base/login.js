@@ -10,5 +10,5 @@ $(document).ready(function() {
 
 //if a token is already set, login shoud not be needed
 if(Cookies.get("token")!==undefined) {
-  window.location = "login";
+  window.location = "cookieredir.php";
 }

@@ -51,17 +51,22 @@
 }
 
 #statusbox {
+  z-index: 10;
+  width: 382px;
   font-family: "DejaVu Sans", sans;
   border: #9F9F9F 4px solid;
   border-radius: 0 0 10px 10px;
-  border-top: 0px;
-  background: dodgerblue;
+  border-top-width: 0px;
+  background: red;
   position: absolute;
   left: 50%;
   top: 0;
   padding: 10px;
   transform: translate(-50%, 0);
   color: white;
+}
+#statusbox h2 {
+  font-size: 20px;
 }
 html{
     height: 100vh;
@@ -79,6 +84,7 @@ body {
     background-image: url('bg.png')
 }
 #signup {
+    z-index: 9;
     font-family: "DejaVu Sans", sans;
     border: #9F9F9F 4px solid;
     border-radius: 0 0 10px 0;
@@ -97,17 +103,17 @@ body {
     text-decoration: none;
     color: inherit;
 }
-@media (max-width: 1100px) {
-    body::after {
-        content: 'under 1100px'
+@media (max-width: 1150px) {
+    #loginbox {
+	margin-top: 20%;
     }
 }
 @media (max-width: 750px) {
     #signup {
         font-family: "DejaVu Sans", sans;
-        border: #9F9F9F 4px solid;
         border-radius: 0 0 0 0;
         width: 100%;
+	margin: 0;
         margin-bottom: 50px;
         border-top: 0;
         border-left: 0;
@@ -115,10 +121,17 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        padding: 10px;
+	padding-left: 0;
+	padding-right: 0;
         background: dodgerblue;
         color: white;
         text-align: center;
+	height: 30px;
+    }
+    #statusbox {
+	top: 40px;
+	border-radius: 10px;
+	border-top-width: 4px;
     }
     #loginbox {
         position: absolute;

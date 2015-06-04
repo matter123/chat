@@ -69,12 +69,11 @@ func LoginHandle(w http.ResponseWriter, r *http.Request) {
 			secure = true
 		}
 		http.SetCookie(w, &http.Cookie{
-			Name:     "token",
-			Value:    "",
-			Path:     "/",
-			Expires:  time.Now().Add(-1 * time.Hour),
-			Secure:   secure,
-			HttpOnly: true,
+			Name:    "token",
+			Value:   "",
+			Path:    "/",
+			Expires: time.Now().Add(-1 * time.Hour),
+			Secure:  secure,
 		})
 		w.Header().Set("Location", "chat.html")
 		w.WriteHeader(303)
@@ -104,11 +103,10 @@ func LoginHandle(w http.ResponseWriter, r *http.Request) {
 		secure = true
 	}
 	http.SetCookie(w, &http.Cookie{
-		Name:     "token",
-		Value:    token.Token(user),
-		Path:     "/",
-		Secure:   secure,
-		HttpOnly: true,
+		Name:   "token",
+		Value:  token.Token(user),
+		Path:   "/",
+		Secure: secure,
 	})
 	w.Header().Set("Location", "chat.html")
 	w.WriteHeader(303)

@@ -52,18 +52,24 @@
 
 #statusbox {
   z-index: 10;
+  top: 40px;
   width: 382px;
   font-family: "DejaVu Sans", sans;
   border: #9F9F9F 4px solid;
-  border-radius: 0 0 10px 10px;
-  border-top-width: 0px;
+  border-radius: 10px;
   background: red;
   position: absolute;
   left: 50%;
-  top: 0;
   padding: 10px;
   transform: translate(-50%, 0);
   color: white;
+}
+#statusbox:after {
+	content: url('x.png');
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
 }
 #statusbox h2 {
   font-size: 20px;
@@ -74,7 +80,11 @@ html{
     padding: 0;
 }
 body {
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: 0;
     background: linear-gradient(#EBEDEF,#D0DBDD) fixed;
     /*background-image: url('bg.png'), linear-gradient(#EBEDEF,#D0DBDD, #EBEDEF);*/
@@ -112,7 +122,7 @@ body {
     #signup {
         font-family: "DejaVu Sans", sans;
         border-radius: 0 0 0 0;
-        width: 100%;
+        right: 0;
 	margin: 0;
         margin-bottom: 50px;
         border-top: 0;
@@ -128,15 +138,18 @@ body {
         text-align: center;
 	height: 30px;
     }
-    #statusbox {
-	top: 40px;
-	border-radius: 10px;
-	border-top-width: 4px;
-    }
     #loginbox {
         position: absolute;
         left: 50%;
         top: 50px;
         transform: translate(-50%, 0);
     }
+}
+@media (max-width: 410px) {
+	#loginbox {
+		width: 90%;
+	}
+	#statusbox {
+		width: 80%;
+	}
 }

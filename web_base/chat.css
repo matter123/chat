@@ -1,0 +1,54 @@
+.chat .name {
+	font-weight: bold;
+}
+.chat {
+	padding: 5px;
+}
+#chatwindow {
+    width: 95%;
+    position: absolute;
+    left: 5%;
+    top: 0;
+	bottom: 5em;
+    margin-left: auto;
+    margin-right: auto;
+	overflow: hidden;
+}
+#chats {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#inputbox {
+	word-wrap: break-word;
+	width: 90%;
+	min-height: 1.5em;
+	border: 1px solid black;
+	border-radius: 5px;
+	background: white;
+	position: absolute;
+	left: 5%;
+	bottom: 20px;
+	padding: 10px;
+	outline: none;
+	display: inline-block;
+}
+
+html{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+	padding: 0;
+	font-size: 16px;
+    background: linear-gradient(#FBFDFF,#E0EBED) fixed;
+    /*background-image: url('bg.png'), linear-gradient(#EBEDEF,#D0DBDD, #EBEDEF);*/
+
+}

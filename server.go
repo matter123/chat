@@ -18,6 +18,7 @@ func main() {
 	http.Handle("/", http.FileServer(http.Dir("web_base")))
 	http.HandleFunc("/login", chatserver.LoginHandle)
 	http.HandleFunc("/signup", chatserver.SignupHandle)
+	http.HandleFunc("/websocketmock", chatserver.WebsocketHandlerMock)
 	if config.Settings().SSLSettings == nil {
 		log.Fatal(server.ListenAndServe())
 	} else {

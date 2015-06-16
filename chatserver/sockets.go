@@ -1,7 +1,6 @@
 package chatserver
 
 import (
-	"encoding/json"
 	"github.com/gorilla/websocket"
 	"github.com/matter123/chat/token"
 	"time"
@@ -47,12 +46,12 @@ func (u *UserConn) Pump() {
 				Time:    string(time.Now().Unix()),
 			}
 			recievedPong = false
-		case v := <-u.Send:
-			err := u.Connection.WriteMessage(websocket.TextMessage, json.Marshal(v))
-			if err != nil {
-				u.Close()
-				return
-			}
+		case /*v := */ <-u.Send:
+			//err := u.Connection.WriteMessage(websocket.TextMessage, json.Marshal(v))
+			//if err != nil {
+			//	u.Close()
+			//	return
+			//}
 		default:
 
 		}
